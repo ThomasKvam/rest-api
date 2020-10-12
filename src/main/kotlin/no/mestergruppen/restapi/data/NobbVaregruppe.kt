@@ -12,7 +12,7 @@ data class NobbVaregruppe(
 
         val beskrivelse: String? = null,
 
-        @ManyToOne(fetch = FetchType.LAZY)
+        @ManyToOne()
         @JoinColumn(name="nobb_hovedgruppe_nr")
         val nobbHovedgruppe: NobbHovedgruppe? = null//,
 

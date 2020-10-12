@@ -1,6 +1,5 @@
 package no.mestergruppen.restapi.data
 
-import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonInclude
 import java.time.LocalDateTime
 import javax.persistence.*
@@ -24,9 +23,8 @@ data class NobbProduct(
 
         val vareType: String? = null,
 
-        @ManyToOne(fetch = FetchType.LAZY)
+        @ManyToOne()
         @JoinColumn(name="nobb_varegruppe_nr")
-        @JsonIgnore
         val nobbVaregruppe: NobbVaregruppe? = null
 
 ){

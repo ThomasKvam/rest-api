@@ -1,5 +1,6 @@
 package no.mestergruppen.restapi.data
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonInclude
 import javax.persistence.Entity
 import javax.persistence.FetchType
@@ -15,6 +16,7 @@ data class NobbOvergruppe(
 
         val beskrivelse: String? = null,
 
-        @OneToMany(mappedBy = "nobbOvergruppe", fetch = FetchType.EAGER)
+        @OneToMany(mappedBy = "nobbOvergruppe")
+        @JsonIgnore
         val hovedgrupper: MutableList<NobbHovedgruppe> = mutableListOf()
 )

@@ -1,5 +1,6 @@
 package no.mestergruppen.restapi.data
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonInclude
 import javax.persistence.*
 
@@ -12,11 +13,12 @@ data class NobbHovedgruppe(
 
         val beskrivelse: String? = null,
 
-        @ManyToOne(fetch = FetchType.LAZY)
+        @ManyToOne()
         @JoinColumn(name="nobb_overgruppe_nr")
         val nobbOvergruppe: NobbOvergruppe? = null,
 
-        @OneToMany(mappedBy = "nobbHovedgruppe", fetch = FetchType.LAZY)
+        @OneToMany(mappedBy = "nobbHovedgruppe")
+        @JsonIgnore
         val varegrupper: MutableList<NobbVaregruppe> = mutableListOf()
 ) {
         override fun toString(): String {
