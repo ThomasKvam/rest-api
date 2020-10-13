@@ -51,4 +51,18 @@ Then run this project in your favorite IDE or using the supplied gradle wrapper:
 $ ./gradlew clean bootRun
 ```
 
-Then access swagger at http://localhost:8090/swagger-ui.html
+Access swagger at http://localhost:8090/swagger-ui.html
+
+## Data
+Flyway is used for database migration and will insert testdata.
+
+## Task
+Create a REST API supporting
+* CRUD for NobbProduct(s)
+* List NobbProducts by NobbVaregruppe
+* Search for NobbProducts by NobbNr and Varetekst containing a text
+
+## Questions
+* Describe potential issues when scaling, discuss possible solutions. 
+* Describe the data model.
+* Describe how the api can be secured.
