@@ -38,16 +38,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
-	testImplementation("io.projectreactor:reactor-test")
-	testImplementation("org.springframework.security:spring-security-test")
-	testImplementation("org.testcontainers:junit-jupiter")
-	testImplementation("org.testcontainers:postgresql")
-}
-
-dependencyManagement {
-	imports {
-		mavenBom("org.testcontainers:testcontainers-bom:${property("testcontainersVersion")}")
-	}
+	testImplementation("org.testcontainers:postgresql:1.15.0-rc2")
 }
 
 tasks.withType<Test> {

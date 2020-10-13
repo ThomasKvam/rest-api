@@ -1,0 +1,15 @@
+server:
+  compression:
+    enabled: false
+  http2:
+    enabled: true
+  port: 8090
+spring:
+  datasource:
+    url: "jdbc:tc:postgresql:11.5:///rest-api"
+    username: "rest-api"
+    password: "local"
+    driverClassName: "org.testcontainers.jdbc.ContainerDatabaseDriver"
+  jpa:
+    hibernate:
+      ddl-auto: validate

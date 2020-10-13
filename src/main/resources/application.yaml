@@ -15,7 +15,6 @@ spring:
       ddl-auto: validate
   flyway:
     enabled: true
-    clean-on-validation-error: true
 
 management:
   endpoints:
