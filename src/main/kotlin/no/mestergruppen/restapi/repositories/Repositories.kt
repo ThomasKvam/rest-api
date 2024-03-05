@@ -1,5 +1,9 @@
-package no.mestergruppen.restapi.data
+package no.mestergruppen.restapi.repositories
 
+import no.mestergruppen.restapi.data.NobbHovedgruppe
+import no.mestergruppen.restapi.data.NobbOvergruppe
+import no.mestergruppen.restapi.data.NobbProduct
+import no.mestergruppen.restapi.data.NobbVaregruppe
 import org.springframework.data.repository.PagingAndSortingRepository
 
 interface NobbProductRepository : PagingAndSortingRepository<NobbProduct, Int> {}

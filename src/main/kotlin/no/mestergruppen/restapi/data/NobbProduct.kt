@@ -10,18 +10,18 @@ data class NobbProduct(
         @Id
         val nobbNr: Int,
 
-        val varetekst: String? = null,
+        var varetekst: String? = null,
 
         @Column(length = 1000)
-        val langVaretekst: String? = null,
+        var langVaretekst: String? = null,
 
-        val prisEnhet: String? = null,
+        var prisEnhet: String? = null,
 
         val created: LocalDateTime? = null,
 
-        val updated: LocalDateTime? = null,
+        var updated: LocalDateTime? = null,
 
-        val vareType: String? = null,
+        var vareType: String? = null,
 
         @ManyToOne()
         @JoinColumn(name="nobb_varegruppe_nr")
